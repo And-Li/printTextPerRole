@@ -13,9 +13,13 @@ public class Main {
         for (indRole = 0; indRole < roles.length; indRole++) {
             System.out.println(roles[indRole] + ":");
             for (indText = 0; indText < textLines.length; indText++ ) {
-                System.out.println(textLines[indText]);
-            }
+                if (textLines[indText].startsWith(roles[indRole])) {
+                    String textPhrase = textLines[indText].replace(roles[indRole] + ":","");
+                    System.out.println(textPhrase);
+                }
 
+            }
+            System.out.print("\n");
         }
 
 
